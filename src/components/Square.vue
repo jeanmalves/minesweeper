@@ -1,7 +1,7 @@
 <template>
-    <div>
-        <div class="square"></div>
-    </div>
+  <div>
+    <div class="square"></div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -11,11 +11,11 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Square extends Vue {}
 </script>
 <style scoped>
-    .square {
-        margin: 1px;
-        width:50px;
-        height: 50px;
-        flex-grow: 1;
-        background-color: #aeb0bd;
-    }
+.square {
+  margin: 1px;
+  width: 50px;
+  height: 50px;
+  flex-grow: 1;
+  background-color: #aeb0bd;
+}
 </style>
