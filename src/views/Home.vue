@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Map />
+    <GameMap />
   </div>
 </template>
 
