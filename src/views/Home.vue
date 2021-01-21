@@ -6,9 +6,11 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { Getter } from "vuex-class";
+import { getModule } from "vuex-module-decorators";
+
 import GameMapComponent from "@/components/GameMap.vue";
-import { GameMap } from "@/model/game-map";
+
+import { GameStore } from "@/store/game";
 
 @Component({
   components: {
@@ -16,6 +18,14 @@ import { GameMap } from "@/model/game-map";
   }
 })
 export default class Home extends Vue {
-  @Getter gameMap!: GameMap;
+  gameStore = getModule(GameStore, this.$store);
+
+  get gameMap() {
+    return this.gameStore.gameMap;
+  }
+
+  setMines() {
+    this.gameStore.setMines();
+  }
 }
 </script>
